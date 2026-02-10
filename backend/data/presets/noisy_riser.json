@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "polyphony": 8,
+  "unison": 1,
+  "unison_spread": 0.1,
+  "noise_level": 0.2,
+  "master_gain": 0.8,
+  "osc1": {
+    "waveform": "saw",
+    "level": 0.7,
+    "detune_cents": 0
+  },
+  "osc2": {
+    "waveform": "square",
+    "level": 0.4,
+    "detune_cents": 7
+  },
+  "amp_env": {
+    "attack": 0.01,
+    "decay": 0.15,
+    "sustain": 0.8,
+    "release": 0.35
+  },
+  "filter_env": {
+    "attack": 0.0,
+    "decay": 0.18,
+    "sustain": 0.2,
+    "release": 0.25
+  },
+  "filter": {
+    "cutoff": 2200,
+    "resonance": 0.2,
+    "key_tracking": 0.4
+  },
+  "lfo1": {
+    "shape": "sine",
+    "rate_hz": 5.0,
+    "amount": 0.0,
+    "destination": "pitch"
+  },
+  "lfo2": {
+    "shape": "saw",
+    "rate_hz": 0.25,
+    "amount": 0.9,
+    "destination": "cutoff"
+  },
+  "effects": [
+    {
+      "name": "delay",
+      "mix": 0.2,
+      "params": {
+        "time": 0.22,
+        "feedback": 0.34
+      }
+    },
+    {
+      "name": "chorus",
+      "mix": 0.18,
+      "params": {
+        "rate": 0.8,
+        "depth": 0.25
+      }
+    },
+    {
+      "name": "distortion",
+      "mix": 0.05,
+      "params": {
+        "drive": 1.2
+      }
+    }
+  ],
+  "mod_matrix": [
+    {
+      "source": "velocity",
+      "destination": "amp",
+      "amount": 0.5
+    }
+  ],
+  "name": "Noisy Riser"
+}
